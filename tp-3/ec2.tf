@@ -20,7 +20,7 @@ resource "aws_instance" "ec2_vm" {
   key_name      = "devops-jules"
   tags          = var.tag_name
 
-  security_groups = ["${aws_security_group.allow_http_https.id}"]
+  security_groups = ["${aws_security_group.allow_http_https.name}"]
 
   root_block_device {
     delete_on_termination = true
